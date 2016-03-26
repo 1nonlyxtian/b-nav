@@ -1,0 +1,115 @@
+/*
+	B-Nav v1.0.0 (https://github.com/1nonlyxtian/b-nav)
+	Copyright 2016 Christian Dasalla
+	
+	This project is licensed under the 
+	MIT License (https://github.com/1nonlyxtian/b-nav/blob/master/LICENSE).
+*/
+
+ul.b-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+	font-family: Roboto;
+	text-transform: uppercase;
+	position: fixed;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+}
+ul.b-nav:after
+{
+	margin-bottom: 50px;
+}
+ul.b-nav.default {
+	background-color: #f3f3f3;
+}
+ul.b-nav.inverse {
+	background-color: #333;
+}
+ul.b-nav li {
+	float: left;
+}
+ul.b-nav li a {
+    display: inline-block;
+    color: #818181;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: box-shadow 0.3s;
+    font-size: 17px;
+}
+ul.b-nav.default li a:active {
+	background-color: #ddd;
+}
+ul.b-nav.inverse li a:active {
+	background-color: #111;
+}
+ul.b-nav li.icon {
+	display: none;
+}
+ul.b-nav  li p.b-nav-brand {
+	padding: 0 12px 0;
+	color: #818181;
+}
+.content {
+	margin-top:50px;
+}
+@media screen and (min-width: 768px) {
+	ul.b-nav.default li a:hover {
+		box-shadow: inset 0 -5px 0px #000; 
+	}
+	ul.b-nav.inverse li a:hover {
+		box-shadow: inset 0 -5px 0px #fff; 
+	}
+	ul.b-nav {
+		padding: 0 120px 0;
+		height: 50px;
+		font-size: 17px;
+	}
+	ul.b-nav  li p.b-nav-brand {
+		font-size:16.5px;
+	}
+	ul.b-nav li.icon {
+		display: none;
+	}
+}
+@media screen and (max-width:767px) {
+	ul.b-nav  li p.b-nav-brand {
+		font-size: 16px;
+	}
+	ul.b-nav li:not(:first-child) {
+		display: none;
+	}
+	ul.b-nav li.icon {
+		float: right;
+		display: inline-block;
+	}
+	ul.b-nav.responsive li.icon {
+		position: fixed;
+		right: 0;
+		top: 0;
+	}
+	ul.b-nav.responsive li {
+		float: none;
+		display: inline;
+	}
+	ul.b-nav.responsive li a {
+		display: block;
+		text-align: left;
+		transition: box-shadow 0.3s;
+	}
+	ul.b-nav.default.responsive li:not(.icon) a:hover {
+		box-shadow: inset 5px 0 0 #000;
+	}
+	ul.b-nav.default li.icon a:hover {
+		background-color: #ddd;
+	}
+	ul.b-nav.inverse.responsive li:not(.icon) a:hover {
+		box-shadow: inset 5px 0 0 #fff;
+	}
+	ul.b-nav.inverse li.icon a:hover {
+		background-color: #111;
+	}
+}
